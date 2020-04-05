@@ -22,15 +22,29 @@ crime1 <- c("jhcitizen_c", "jhpolice_c",
 demo <- c("emo", "blackm_15_24", "whitem_15_24", 
           "blackm_25_44", "whitem_25_44")
 
-lintrend <- colnames(
-  castle %>%
-    select(starts_with("trend"))
+# variables dropped to prevent colinearity
+dropped_vars <- c("r20004", "r20014",
+                  "r20024", "r20034", 
+                  "r20044", "r20054", 
+                  "r20064", "r20074", 
+                  "r20084", "r20094", 
+                  "r20101", "r20102", "r20103", 
+                  "r20104", "trend_9", "trend_46", 
+                  "trend_49", "trend_50", "trend_51"
 )
 
-region <- colnames(
-  castle %>%
-    select(starts_with("r20"))
-)
+lintrend <- castle %>%
+    select(starts_with("trend")) %>% 
+  colnames %>% 
+  # remove due to colinearity
+  subset(.,! . %in% dropped_vars) 
+
+region <- castle %>%
+  select(starts_with("r20")) %>% 
+  colnames %>% 
+  # remove due to colinearity
+  subset(.,! . %in% dropped_vars) 
+
 
 exocrime <- c("l_lacerny", "l_motor")
 spending <- c("l_exp_subsidy", "l_exp_pubwelfare")
