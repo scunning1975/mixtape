@@ -19,9 +19,6 @@ castle <- castle %>%
     lag5 = case_when(time_til == 5 ~ 1, TRUE ~ 0)
   )
 
-paste(paste("lead", 1:9, sep = ""), collapse = " + ")
-paste(paste("lag", 1:5, sep = ""), collapse = " + ")
-
 formula3 <- as.formula(
   paste("l_homicide ~ + ",
         paste(
