@@ -1,3 +1,5 @@
+library(stargazer)
+
 dat <- tibble(
   x = rnorm(1000, 100, 50)
 ) %>% 
