@@ -1,5 +1,6 @@
 library(tidyverse)
 library(rddensity)
+library(rdd)
 
 DCdensity(lmb_data$demvoteshare, cutpoint = 0.5)
 

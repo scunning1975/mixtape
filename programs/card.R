@@ -13,7 +13,7 @@ read_data <- function(df)
 card <- read_data("card.dta")
 
 #Define variable 
-#(Y1 = Dependent Variable, Y2 = endogenous variable, X1 = exogenous variable, X2 = Intrument)
+#(Y1 = Dependent Variable, Y2 = endogenous variable, X1 = exogenous variable, X2 = Instrument)
 
 attach(card)
 
