@@ -1,3 +1,6 @@
+library(tidyverse)
+library(haven)
+
 read_data <- function(df)
 {
   full_path <- paste("https://raw.github.com/scunning1975/mixtape/master/", 
@@ -6,11 +9,7 @@ read_data <- function(df)
   return(df)
 }
 
-nsw_dw_cpscontrol <- read_data("cps_controls.dta") %>%
-  mutate(hisp = hispanic,
-         marr = married,
-         educ = education) %>% 
-  select(-hispanic, -married, -education) %>% 
+nsw_dw_cpscontrol <- read_data("cps_mixtape.dta") %>% 
   bind_rows(nsw_dw) %>% 
   mutate(agesq = age^2,
          agecube = age^3,
@@ -52,3 +51,4 @@ nsw_dw_cpscontrol %>%
   filter(treat == 1) %>% 
   ggplot() +
   geom_histogram(aes(x = pscore))
+

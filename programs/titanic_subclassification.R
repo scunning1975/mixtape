@@ -72,3 +72,4 @@ wt4 <- titanic %>%
 wate = diff1*wt1 + diff2*wt2 + diff3*wt3 + diff4*wt4
 
 stargazer(wate, sdo, type = "text")
+

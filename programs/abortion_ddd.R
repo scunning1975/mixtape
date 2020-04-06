@@ -39,5 +39,5 @@ abortion_plot %>%
   geom_point()+
   geom_text(aes(label = year), hjust=-0.002, vjust = -0.03)+
   geom_hline(yintercept = 0) +
-  geom_errorbar(aes(ymin = mean-sd, ymax = mean+sd), width = 0.2,
+  geom_errorbar(aes(ymin = mean-sd*1.96, ymax = mean+sd*1.96), width = 0.2,
                 position = position_dodge(0.05))

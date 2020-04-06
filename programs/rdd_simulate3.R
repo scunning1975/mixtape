@@ -13,8 +13,7 @@ dat <- tibble(
 
 
 ggplot(aes(x, y3, colour = factor(D)), data = dat) +
-  geom_point
-(alpha = 0.2) +
+  geom_point(alpha = 0.2) +
   geom_vline(xintercept = 140, colour = "grey", linetype = 2) +
   stat_smooth(method = "lm", se = F) +
   labs(x = "Test score (X)", y = "Potential Outcome (Y)")

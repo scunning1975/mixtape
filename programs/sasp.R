@@ -1,6 +1,7 @@
 library(tidyverse)
 library(haven)
 library(estimatr)
+library(plm)
 
 read_data <- function(df)
 {
@@ -20,7 +21,8 @@ sasp <- sasp %>%
   arrange(id, session)
 
 #Balance Data
-balanced_sasp <- make.pbalanced(sasp, balance.type = "shared.individuals")
+balanced_sasp <- make.pbalanced(sasp, 
+                                balance.type = "shared.individuals")
 
 #Demean Data
 balanced_sasp <- balanced_sasp %>% mutate( 

@@ -1,3 +1,15 @@
+library(tidyverse)
+library(haven)
+
+read_data <- function(df)
+{
+  full_path <- paste("https://raw.github.com/scunning1975/mixtape/master/", 
+                     df, sep = "")
+  df <- read_dta(full_path)
+  return(df)
+}
+
+
 auto <- read_data("auto.dta") %>% 
   mutate(length = length - mean(length))
 

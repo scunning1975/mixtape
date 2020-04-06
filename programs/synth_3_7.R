@@ -1,6 +1,5 @@
-system.time({
-  placebos <- generate.placebos(dataprep_out, synth_out, Sigf.ipop = 3)
-})
+
+placebos <- generate.placebos(dataprep_out, synth_out, Sigf.ipop = 3)
 
 plot_placebos(placebos)
 

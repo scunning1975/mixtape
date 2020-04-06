@@ -2,7 +2,7 @@ library(tidyverse)
 library(haven)
 library(Synth)
 library(devtools)
-devtools::install_github("bcastanho/SCtools")
+if(!require(SCtools)) devtools::install_github("bcastanho/SCtools")
 library(SCtools)
 
 read_data <- function(df)

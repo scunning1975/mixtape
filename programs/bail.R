@@ -18,6 +18,7 @@ judge <- read_data("judge_fe.dta")
 judge_pre <- judge %>% 
   select(starts_with("judge_")) %>% 
   colnames() %>% 
+  subset(., . != "judge_pre_8") %>% # remove one for colinearity
   paste(., collapse = " + ")
 
 demo <- judge %>% 
@@ -31,13 +32,15 @@ off <- judge %>%
   paste(., collapse = " + ")
 
 prior <- judge %>% 
-  select(priorCases, priorWI5, prior_felChar, prior_guilt, onePrior, threePriors) %>% 
+  select(priorCases, priorWI5, prior_felChar, 
+         prior_guilt, onePrior, threePriors) %>% 
   colnames() %>% 
   paste(., collapse = " + ")
 
 control2 <- judge %>%
   mutate(bailDate = as.numeric(bailDate)) %>% 
-  select(day, day2, day3, bailDate, t1, t2, t3, t4, t5, t6) %>% 
+  select(day, day2, bailDate, 
+         t1, t2, t3, t4, t5) %>% # all but one time period for colinearity
   colnames() %>% 
   paste(., collapse = " + ")
 
@@ -53,9 +56,9 @@ max_ols <- lm_robust(max_formula, data = judge)
 #--- Instrumental Variables Estimations
 #-- 2sls main results
 #- Min and Max Control formulas
-min_formula <- as.formula(paste("guilt ~", control2, " | 0 | (jail3 ~ ", judge_pre, ")"))
+min_formula <- as.formula(paste("guilt ~ ", control2, " | 0 | (jail3 ~ 0 +", judge_pre, ")"))
 max_formula <- as.formula(paste("guilt ~", demo, "+ possess +", prior, "+ robbery +", 
-                                off, "+ DUI1st +", control2, "+ drugSell + aggAss | 0 | (jail3 ~ ", judge_pre, ")"))
+                                off, "+ DUI1st +", control2, "+ drugSell + aggAss | 0 | (jail3 ~ 0 +", judge_pre, ")"))
 #2sls for min and max
 min_iv <- felm(min_formula, data = judge)
 summary(min_iv)
