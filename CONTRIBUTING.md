@@ -34,10 +34,10 @@ To create a pull request, you will need to:
   ```
 1. Create and switch to a new branch. Make your changes. Commit, and push.
   ```bash
-  git checkout -b "new-branch"
+  git checkout -b new-branch
   # Make your changes
   git add "file-that-changed.do"
   git commit -m "The commit message"
-  git push
+  git push origin new-branch
   ```
 1. Navigate back to GitHub. You will see a yellow banner near the top of your repository. Click on *Compare & Pull Request*. If your pull request closes an issue, add `Fixes #<ISSUE-NUMBER>` to the body of the PR so the issue is automatically closed once the PR is accepted.
