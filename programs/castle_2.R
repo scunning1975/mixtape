@@ -30,3 +30,4 @@ formula3 <- as.formula(
 )
 
 reg3 <- felm(formula3, weights = castle$popwt, data = castle)
+summary(reg3)
