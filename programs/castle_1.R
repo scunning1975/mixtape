@@ -61,26 +61,27 @@ law <- c("cdl")
 
 #--- Generating the formula
 formula1 <- as.formula(
-  paste("l_homicide ~ post + ",
+  paste("l_homicide ~ ",
         paste(
           paste(xvar, collapse = " + "),
           paste(region, collapse = " + "),
           paste(lintrend, collapse = " + "),
           paste(law, collapse = " + "), sep = " + "),
-        "| year | 0 | sid"
+        "| year + sid| 0 | sid"
   )
 )
 
 formula2 <- as.formula(
-  paste("l_homicide ~ post + ",
+  paste("l_homicide ~ ",
         paste(
           paste(xvar, collapse = " + "),
           paste(region, collapse = " + "),
           paste(lintrend, collapse = " + "),
           paste("post", collapse = " + "), sep = " + "),
-        "| year | 0 | sid"
+        "| year + sid| 0 | sid"
   )
 )
 
 reg1 <- felm(formula1, weights = castle$popwt, data = castle)
 reg2 <- felm(formula2, weights = castle$popwt, data = castle)
+
