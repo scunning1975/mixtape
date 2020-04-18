@@ -19,7 +19,7 @@ castle <- castle %>%
     lag5 = case_when(time_til == 5 ~ 1, TRUE ~ 0)
   )
 
-formula3 <- as.formula(
+event_study_formula <- as.formula(
   paste("l_homicide ~ + ",
         paste(
           paste(region, collapse = " + "),
@@ -29,5 +29,5 @@ formula3 <- as.formula(
   ),
 )
 
-reg3 <- felm(formula3, weights = castle$popwt, data = castle)
-summary(reg3)
+event_study_reg <- felm(event_study_formula, weights = castle$popwt, data = castle)
+summary(event_study_reg)

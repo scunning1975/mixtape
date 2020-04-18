@@ -10,8 +10,8 @@ plot_order <- c("lead9", "lead8", "lead7",
 # from the regression, label them accordingly
 # add a zero'th lag for plotting purposes
 leadslags_plot <- tibble(
-  sd = c(reg3$cse[plot_order], 0),
-  mean = c(coef(reg3)[plot_order], 0),
+  sd = c(event_study_reg$cse[plot_order], 0),
+  mean = c(coef(event_study_reg)[plot_order], 0),
   label = c(-9,-8,-7,-6, -5, -4, -3, -2, -1, 1,2,3,4,5, 0)
 )
 
