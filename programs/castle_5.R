@@ -28,12 +28,12 @@ bacon_plot <- ggplot(data = df_bacon) +
 bacon_plot
 
 # create formula
-formula4 <- as.formula(
+bacon_dd_formula <- as.formula(
   'l_homicide ~ post | year + sid | 0 | sid')
 
 # Simple diff-in-diff regression
-reg4 <- felm(formula = formula4, data = castle)
-summary(reg4)
+bacon_dd_reg <- felm(formula = bacon_dd_formula, data = castle)
+summary(bacon_dd_reg)
 
 # Note that the estimate from earlier equals the 
 # coefficient on post
