@@ -59,19 +59,7 @@ xvar <- c(
 
 law <- c("cdl")
 
-#--- Generating the formula
-formula1 <- as.formula(
-  paste("l_homicide ~ ",
-        paste(
-          paste(xvar, collapse = " + "),
-          paste(region, collapse = " + "),
-          paste(lintrend, collapse = " + "),
-          paste(law, collapse = " + "), sep = " + "),
-        "| year + sid | 0 | sid"
-  )
-)
-
-formula2 <- as.formula(
+dd_formula <- as.formula(
   paste("l_homicide ~ ",
         paste(
           paste(xvar, collapse = " + "),
@@ -82,10 +70,8 @@ formula2 <- as.formula(
   )
 )
 
-#Fixed effect regression using cdl as treatment variable 
-reg1 <- felm(formula1, weights = castle$popwt, data = castle)
-summary(reg1)
-
 #Fixed effect regression using post as treatment variable 
-reg2 <- felm(formula2, weights = castle$popwt, data = castle)
-summary(reg2)
+dd_reg <- felm(dd_formula, weights = castle$popwt, data = castle)
+summary(dd_reg)
+
+
