@@ -1,0 +1,33 @@
+\begin{table}[htbp]\centering
+\tiny
+\caption{Estimated effect of Prison Measures with 1993 Treatment (Fixed effects)}
+\label{prisons}
+\begin{center}
+\begin{threeparttable}
+\begin{tabular}{l*{6}{c}}
+\toprule
+\multicolumn{1}{l}{\textbf{Prison Measures:}}&
+\multicolumn{1}{c}{\textbf{Incarceration}}&
+\multicolumn{1}{c}{\textbf{Sworn Officer Employment}}&
+\multicolumn{1}{c}{\textbf{Drug Arrests}}&
+\multicolumn{1}{c}{\textbf{Admissions}}&
+\multicolumn{1}{c}{\textbf{Releases}}&
+\multicolumn{1}{c}{\textbf{Paroles/Total Releases}}\\
+\midrule
+Prison expansion    &     286.731**   &      -2.407   &      -5.251   &       8.922   &      -5.962   &      -0.280*   \\
+5th percentile      &     -84.550   &     -26.309   &     -80.102   &    -102.905   &    -101.759   &      -0.258   \\
+95th percentile     &     137.184   &      41.343   &     101.058   &      82.239   &      75.594   &       0.240   \\
+Two-tailed test p-value&        0.04   &        1.14   &        0.95   &        1.10   &        0.95   &        0.10   \\
+N                   &         950   &         969   &         798   &         931   &         931   &         741   \\
+\midrule
+State and year FE                              & Yes   & Yes   & Yes   & Yes   & Yes   & Yes            \\
+Time variant controls                  & Yes   & Yes   & Yes   & Yes   & Yes   & Yes            \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\tiny
+\item Time-variant controls include state-level values of percent White, Black, Asian, Other race, less than a high school degree, with a high school degree, with some college, with college degree or higher, aged 0-18, 19-30, 31-65, 65 and older, male, female, as well as average household income and percent who receive free lunch.  Table presents 5th and 95th percentile confidence intervals from placebo-based inferential calculations, and p-values from a two-tailed test. * p$<$0.10, ** p$<$0.05, *** p$<$0.01
+\end{tablenotes}
+\end{threeparttable}
+\end{center}
+\end{table}

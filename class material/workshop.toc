@@ -1,0 +1,61 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Hidden curriculum}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Introduction}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Workflow workflow workflow}{10}{0}{1}
+\beamer@subsectionintoc {1}{3}{Directories}{33}{0}{1}
+\beamer@subsectionintoc {1}{4}{Do files and R programs}{44}{0}{1}
+\beamer@subsectionintoc {1}{5}{Naming conventions}{49}{0}{1}
+\beamer@subsectionintoc {1}{6}{Soft skills}{53}{0}{1}
+\beamer@sectionintoc {2}{Foundational causality stuff}{58}{0}{2}
+\beamer@subsectionintoc {2}{1}{Regression review}{58}{0}{2}
+\beamer@subsubsectionintoc {2}{1}{1}{Deriving the Ordinary Least Squares Estimates}{71}{0}{2}
+\beamer@subsubsectionintoc {2}{1}{2}{Expected Values and Variance of OLS}{87}{0}{2}
+\beamer@subsubsectionintoc {2}{1}{3}{Regression anatomy theorem}{160}{0}{2}
+\beamer@subsubsectionintoc {2}{1}{4}{Omitted variable bias formula}{170}{0}{2}
+\beamer@subsectionintoc {2}{2}{Potential outcomes}{174}{0}{2}
+\beamer@subsectionintoc {2}{3}{Randomization and selection bias}{191}{0}{2}
+\beamer@subsectionintoc {2}{4}{Randomization inference}{208}{0}{2}
+\beamer@subsectionintoc {2}{5}{Causal models and Directed Acyclical Graphs}{252}{0}{2}
+\beamer@subsubsectionintoc {2}{5}{1}{Designing identification strategies}{263}{0}{2}
+\beamer@subsubsectionintoc {2}{5}{2}{Conditioning on a collider}{273}{0}{2}
+\beamer@sectionintoc {3}{Regression discontinuity designs}{295}{0}{3}
+\beamer@subsectionintoc {3}{1}{Introduction}{295}{0}{3}
+\beamer@subsectionintoc {3}{2}{Sharp Design}{303}{0}{3}
+\beamer@subsectionintoc {3}{3}{Smoothness, Extrapolation and Estimation}{309}{0}{3}
+\beamer@subsubsectionintoc {3}{3}{1}{Smoothness assumption}{311}{0}{3}
+\beamer@subsubsectionintoc {3}{3}{2}{Nonlinearities}{321}{0}{3}
+\beamer@subsectionintoc {3}{4}{Testing for violations}{334}{0}{3}
+\beamer@subsectionintoc {3}{5}{Visualization}{357}{0}{3}
+\beamer@subsectionintoc {3}{6}{Inference, kernels, bandwidths}{367}{0}{3}
+\beamer@subsectionintoc {3}{7}{Sub-RDD: Close election designs}{378}{0}{3}
+\beamer@subsectionintoc {3}{8}{Fuzzy design}{391}{0}{3}
+\beamer@sectionintoc {4}{Instrumental variables}{403}{0}{4}
+\beamer@subsectionintoc {4}{1}{Intuition}{403}{0}{4}
+\beamer@subsectionintoc {4}{2}{Two stage least squares}{436}{0}{4}
+\beamer@subsectionintoc {4}{3}{Weak instruments}{452}{0}{4}
+\beamer@subsectionintoc {4}{4}{Practical IV Tips}{487}{0}{4}
+\beamer@subsectionintoc {4}{5}{Heterogeneity and the LATE}{496}{0}{4}
+\beamer@subsectionintoc {4}{6}{Lottery designs}{525}{0}{4}
+\beamer@subsectionintoc {4}{7}{Judge fixed effects}{577}{0}{4}
+\beamer@sectionintoc {5}{Twoway fixed effects estimator}{603}{0}{5}
+\beamer@subsectionintoc {5}{1}{Introduction}{603}{0}{5}
+\beamer@subsectionintoc {5}{2}{Two Estimators}{613}{0}{5}
+\beamer@subsectionintoc {5}{3}{Empirical exercise}{623}{0}{5}
+\beamer@sectionintoc {6}{Differences-in-differences}{629}{0}{6}
+\beamer@subsectionintoc {6}{1}{John Snow}{629}{0}{6}
+\beamer@subsectionintoc {6}{2}{The simple 2x2}{651}{0}{6}
+\beamer@subsectionintoc {6}{3}{Event study}{680}{0}{6}
+\beamer@subsectionintoc {6}{4}{Differential timing}{727}{0}{6}
+\beamer@sectionintoc {7}{Comparative case studies}{841}{0}{7}
+\beamer@subsectionintoc {7}{1}{Synthetic control}{841}{0}{7}
+\beamer@subsectionintoc {7}{2}{Replication exercise}{879}{0}{7}
+\beamer@sectionintoc {8}{Matching and weighting}{889}{0}{8}
+\beamer@subsectionintoc {8}{1}{Stratification}{889}{0}{8}
+\beamer@subsectionintoc {8}{2}{Nearest neighbor matching}{922}{0}{8}
+\beamer@subsectionintoc {8}{3}{Propensity scores}{971}{0}{8}
+\beamer@subsectionintoc {8}{4}{Inverse probability weighting}{991}{0}{8}
+\beamer@subsubsectionintoc {8}{4}{1}{Double robust}{998}{0}{8}
+\beamer@subsectionintoc {8}{5}{Propensity score matching}{1000}{0}{8}
+\beamer@subsectionintoc {8}{6}{Coarsened exact matching}{1043}{0}{8}
+\beamer@sectionintoc {9}{Concluding remarks}{1051}{0}{9}
+\beamer@subsectionintoc {9}{1}{Good luck and have fun}{1051}{0}{9}
