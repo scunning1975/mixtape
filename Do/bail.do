@@ -14,12 +14,18 @@ reg guilt jail3 $control2, robust
 reg guilt jail3 possess robbery DUI1st drugSell aggAss $demo $prior $off  $control2 , robust
 
 
+* First stage
+reg jail3 $judge_pre $control2, robust
+reg jail3 possess robbery DUI1st drugSell aggAss $demo $prior $off  $control2 $judge_pre, robust
+
+
+
 ** Instrumental variables estimation
 * 2sls main results
 * minimum controls
-ivregress 2sls guilt (jail3= $judge_pre) $control2, robust
+ivregress 2sls guilt (jail3= $judge_pre) $control2, robust first
 * maximum controls
-ivregress 2sls guilt (jail3= $judge_pre) possess robbery DUI1st drugSell aggAss $demo $prior $off $control2 , robust
+ivregress 2sls guilt (jail3= $judge_pre) possess robbery DUI1st drugSell aggAss $demo $prior $off $control2 , robust first
 
 * JIVE main results
 * minimum controls
