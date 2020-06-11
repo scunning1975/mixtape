@@ -472,7 +472,7 @@ reg y i.year g1 treat if ((year==1985 | year==1986) & ((g1==1) | (time_til<0)))
 
 * Now calculate ATT (1986, 1987)
 reg y i.year g1 treat if ((year==1985 | year==1987) & ((g1==1) | (time_til<0)))
-* ATT(1986, 1987) = 19.96895
+* ATT(1986, 1987) = 20.04393
 
 * Now calculate ATT (1986, 1988)
 reg y i.year g1 treat if ((year==1985 | year==1988) & ((g1==1) | (time_til<0)))
