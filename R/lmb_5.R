@@ -1,4 +1,4 @@
-lmb_data %>% 
+lmb_data <- lmb_data %>% 
   mutate(demvoteshare_sq = demvoteshare_c^2)
 
 lm_1 <- lm_robust(score ~ lagdemocrat*demvoteshare_c + lagdemocrat*demvoteshare_sq, 
