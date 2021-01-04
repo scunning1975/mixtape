@@ -25,8 +25,8 @@ reg <- abortion %>%
             data = ., weights = totpop, clusters = fip)
 
 abortion_plot <- tibble(
-  sd = reg$std.error[-1:-75],
-  mean = reg$coefficients[-1:-75],
+  sd = reg$std.error[-1:-25],
+  mean = reg$coefficients[-1:-25],
   year = c(1986:2000))
 
 abortion_plot %>% 
