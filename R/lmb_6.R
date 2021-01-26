@@ -1,4 +1,4 @@
-lmb_data %>% 
+lmb_data <- lmb_data %>% 
   filter(demvoteshare > .45 & demvoteshare < .55) %>%
   mutate(demvoteshare_sq = demvoteshare_c^2)
 
