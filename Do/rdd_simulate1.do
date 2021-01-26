@@ -3,7 +3,7 @@ capture log close
 set obs 1000
 set seed 1234567
 
-* Generate running variable
+* Generate running variable. Stata code attributed to Marcelo Perraillon.
 gen x = rnormal(50, 25)
 replace x=0 if x < 0
 drop if x > 100

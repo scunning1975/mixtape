@@ -1,4 +1,4 @@
-* Polynomial modeling
+* Stata code attributed to Marcelo Perraillon.
 capture drop y
 gen y = 10000 + 0*D - 100*x +x2 + rnormal(0, 1000)
 reg y D##c.(x x2 x3)

@@ -1,4 +1,4 @@
-* Note kernel-weighted local polynomial regression is a smoothing method.
+* Stata code attributed to Marcelo Perraillon.
 capture drop sdem* x1 x0
 lpoly score demvoteshare if democrat == 0, nograph kernel(triangle) gen(x0 sdem0) bwidth(0.1)}
 lpoly score demvoteshare if democrat == 1, nograph kernel(triangle) gen(x1 sdem1)  bwidth(0.1)}

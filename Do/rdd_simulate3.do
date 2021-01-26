@@ -1,4 +1,4 @@
-* Nonlinear data generating process
+* Stata code attributed to Marcelo Perraillon.
 drop y y1 x* D
 set obs 1000
 gen x = rnormal(100, 50)

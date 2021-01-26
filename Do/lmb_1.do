@@ -1,3 +1,4 @@
+* Stata code attributed to Marcelo Perraillon.
 use https://github.com/scunning1975/mixtape/raw/master/lmb-data.dta, clear
 
 * Replicating Table 1 of Lee, Moretti and Butler (2004)
