@@ -1,4 +1,3 @@
-cd /users/scott\_cunningham/downloads/texas/do
 * Estimation 1: Texas model of black male prisoners (per capita) 
 use https://github.com/scunning1975/mixtape/raw/master/texas.dta, clear
 ssc install synth 
