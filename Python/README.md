@@ -1,3 +1,5 @@
+# Notes on Python Implementation
+
 Code outputs have been verified and match R output except in the following cases:
 
 **Differences_in_Differences.ipynb:** The design matrix in the Cunningham and Cornwell (2013) example is rank deficient. lm and lm_robust have a convergence issues. The problem seems to be with the fip variable. The statsmodels algorithm is more robust to rank deficiency resulting is different results
