@@ -51,7 +51,7 @@ diff2 = ey21 - ey20
 diff3 = ey31 - ey30
 diff4 = ey41 - ey40
 
-obs = nrow(titanic)
+obs = nrow(titanic %>% filter(d == 0))
 
 wt1 <- titanic %>% 
   filter(s == 1 & d == 0) %$%

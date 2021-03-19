@@ -35,7 +35,7 @@ titanic.loc[(titanic.sex_d == 0) & (titanic.age_d==0), 's'] = 2
 titanic.loc[(titanic.sex_d == 1) & (titanic.age_d==1), 's'] = 3
 titanic.loc[(titanic.sex_d == 1) & (titanic.age_d==0), 's'] = 4
 
-obs = titanic.shape[0]
+obs = titanic.loc[titanic.d == 0].shape[0]
 
 def weighted_avg_effect(df):
     diff = df[df.d==1].survived_d.mean() - df[df.d==0].survived_d.mean()

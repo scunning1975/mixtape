@@ -27,11 +27,11 @@ count if s==1 & d==0
 count if s==2 & d==0
 count if s==3 & d==0
 count if s==4 & d==0
-count
+count if d == 0
 
-gen wt1=281/2201
-gen wt2=44/2201
-gen wt3=1492/2201
-gen wt4=59/2201
+gen wt1=281/1876
+gen wt2=44/1876
+gen wt3=1492/1876
+gen wt4=59/1876
 gen wate=diff1*wt1 + diff2*wt2 + diff3*wt3 + diff4*wt4
 sum wate sdo
