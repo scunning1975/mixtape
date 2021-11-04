@@ -4,6 +4,7 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf 
 from itertools import combinations 
 import plotnine as p
+from stargazer.stargazer import Stargazer
 
 # read data
 import ssl

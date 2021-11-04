@@ -28,6 +28,9 @@ ivregress 2sls guilt (jail3= $judge_pre) $control2, robust first
 ivregress 2sls guilt (jail3= $judge_pre) possess robbery DUI1st drugSell aggAss $demo $prior $off $control2 , robust first
 
 * JIVE main results
+* jive can be installed using: net from https://www.stata-journal.com/software/sj6-3/
+* net install st0108
+
 * minimum controls
 jive guilt (jail3= $judge_pre) $control2, robust
 * maximum controls
