@@ -17,11 +17,11 @@ hiv = read_data("thornton_hiv.dta")
 
 def permuteHIV(df, random = True):
     tb = df.copy()
-    first_half = np.ceil(tb.shape[0] / 2)
-    second_half = tb.shape[0] - first_half
+    n_treated = 2222
+    n_control = tb.shape[0] - n_treated
     if random:
         tb = tb.sample(frac=1)
-        tb['any'] = np.concatenate((np.repeat(1, first_half), np.repeat(0, second_half)))
+        tb['any'] = np.concatenate((np.repeat(1, n_treated), np.repeat(0, n_control)))
     
     te1 = tb[tb['any']==1]['got'].mean()
     te0 = tb[tb['any']==0]['got'].mean()
