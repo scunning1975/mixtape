@@ -48,14 +48,12 @@ leadslags_plot = pd.DataFrame({
 leadslags_plot['lb'] = leadslags_plot['mean'] - leadslags_plot['sd']*1.96
 leadslags_plot['ub'] = leadslags_plot['mean'] + leadslags_plot['sd']*1.96
 
-# This version has a point-range at each
-# estimated lead or lag
-# comes down to stylistic preference at the
-# end of the day!
+# This version has a point-range at each estimated lead or lag
+# comes down to stylistic preference at the end of the day!
 p.ggplot(leadslags_plot, p.aes(x = 'label', y = 'mean',
              ymin = 'lb', 
              ymax = 'ub')) +\
-    p.geom_hline(yintercept = 0.035169444, color = "red") +\
+    p.geom_hline(yintercept = 0.0769, color = "red") +\
     p.geom_pointrange() +\
     p.theme_minimal() +\
     p.xlab("Years before and after castle doctrine expansion") +\
