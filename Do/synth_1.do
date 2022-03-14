@@ -1,4 +1,3 @@
-cd /users/scott\_cunningham/downloads/texas/do
 * Estimation 1: Texas model of black male prisoners (per capita) 
 use https://github.com/scunning1975/mixtape/raw/master/texas.dta, clear
 ssc install synth 
@@ -12,7 +11,7 @@ synth 	bmprison
 			,		
 		trunit(48) trperiod(1993) unitnames(state) 
 		mspeperiod(1985(1)1993) resultsperiod(1985(1)2000)
-		keep(../data/synth/synth\_bmprate.dta) replace fig;
+		keep(../data/synth/synth_bmprate.dta) replace fig;
 		mat list e(V_matrix);
 		#delimit cr
-		graph save Graph ../Figures/synth\_tx.gph, replace}
+		graph save Graph ../Figures/synth_tx.gph, replace}

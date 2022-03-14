@@ -30,7 +30,7 @@ collapse (mean) te1 te0, by(permutation)
 gen 	ate = te1 - te0
 keep 	ate permutation
 
-sort ate
+gsort -ate
 gen rank = _n
 su rank if permutation==1
 gen pvalue = (`r(mean)'/70)

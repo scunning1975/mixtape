@@ -7,7 +7,7 @@ leadslags_plot %>%
              ymin = mean-1.96*sd, 
              ymax = mean+1.96*sd)) +
   # this creates a red horizontal line
-  geom_hline(yintercept = 0.035169444, color = "red") +
+  geom_hline(yintercept = 0.0769, color = "red") +
   geom_line() + 
   geom_point() +
   geom_ribbon(alpha = 0.2) +

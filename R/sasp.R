@@ -49,7 +49,7 @@ balanced_sasp <- balanced_sasp %>% mutate(
   demean_asian_cl = asian_cl - ave(asian_cl, id),
   demean_black_cl = black_cl - ave(black_cl, id),
   demean_hispanic_cl = hispanic_cl - ave(hispanic_cl, id),
-  demean_othrace_cl = othrace_cl - ave(lnw, id),
+  demean_othrace_cl = othrace_cl - ave(othrace_cl, id),
   demean_hot = hot - ave(hot, id),
   demean_massage_cl = massage_cl - ave(massage_cl, id)
   )

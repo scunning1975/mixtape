@@ -13,7 +13,7 @@ synth 	bmprison
 		,		 
 			trunit(`i') trperiod(1993) unitnames(state)  
 			mspeperiod(1985(1)1993) resultsperiod(1985(1)2000) 
-			keep(../data/synth/synth\_bmprate\_`i'.dta) replace; 
+			keep(../data/synth/synth_bmprate_`i'.dta) replace; 
 			matrix state`i' = e(RMSPE); /* check the V matrix*/ 
 
 foreach i of local statelist {; 

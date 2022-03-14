@@ -41,7 +41,7 @@ n <- nrow(inner_join(te1, te0, by = "permutation"))
 p_value <- inner_join(te1, te0, by = "permutation") %>%
   mutate(ate = te1 - te0) %>% 
   select(permutation, ate) %>% 
-  arrange(ate) %>% 
+  arrange(desc(ate)) %>% 
   mutate(rank = 1:nrow(.)) %>% 
   filter(permutation == 1) %>%
   pull(rank)/n

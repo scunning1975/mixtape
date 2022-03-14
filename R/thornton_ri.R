@@ -18,13 +18,14 @@ tb <- NULL
 
 permuteHIV <- function(df, random = TRUE){
   tb <- df
-  first_half <- ceiling(nrow(tb)/2)
-  second_half <- nrow(tb) - first_half
+  # Number of treated in dataset
+  n_treated <- 2222
+  n_control <- nrow(tb) - n_treated
   
   if(random == TRUE){
     tb <- tb %>%
       sample_frac(1) %>%
-      mutate(any = c(rep(1, first_half), rep(0, second_half)))
+      mutate(any = c(rep(1, n_treated), rep(0, n_control)))
   }
   
   te1 <- tb %>%
