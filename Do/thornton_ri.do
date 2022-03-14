@@ -58,6 +58,6 @@ save "`final'", replace
 gsort -ate
 gen rank = _n
 su rank if iteration==1
-gen pvalue = (`r(mean)'/1000)
+gen pvalue = rank/1000
 list if iteration==1
 
