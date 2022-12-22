@@ -1,6 +1,6 @@
 use https://github.com/scunning1975/mixtape/raw/master/abortion.dta, clear
 
-* DDD estimate for 15-19 year olds vs. 20-24 year olds in repeal vs Roe states
+* DDD estimate for 15-19 year olds vs. 25-29 year olds in repeal vs Roe states
 gen yr=(repeal) & (younger==1)
 gen wm=(wht==1) & (male==1)
 gen wf=(wht==1) & (male==0)

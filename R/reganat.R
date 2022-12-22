@@ -2,7 +2,7 @@ library(tidyverse)
 library(haven)
 
 read_data <- function(df) {
-  full_path <- paste0("https://raw.github.com/scunning1975/mixtape/master/",
+  full_path <- paste0("https://github.com/scunning1975/mixtape/raw/master/",
                       df)
   haven::read_dta(full_path)
 }
