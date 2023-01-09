@@ -15,8 +15,8 @@ generate occupation = (1) + (2)*ability + (0)*female + (-2)*discrimination + rno
 generate wage = (1) + (-1)*discrimination + (1)*occupation + 2*ability + rnormal() 
 
 * Regressions
-regress wage female 
-regress wage female occupation 
-regress wage female occupation ability
+regress wage discrimination 
+regress wage discrimination occupation 
+regress wage discrimination occupation ability
 
 
