@@ -4,7 +4,7 @@
 		matlist state`i', names(rows)
 									}
 #delimit ;
-matstate=state1/state2/state4/state5/state6/state8/state9/state10/state11/state12/state13/state15/state16/state17/state18/state20/state21/state22/state23/state24/state25/state26/state27/state28/state29/state30/state31/state32/state33/state34/state35/state36/state37/state38/state39/state40/state41/state42/state45/state46/state47/state48/state49/state51/state53/state55; 
+mat state=state1/state2/state4/state5/state6/state8/state9/state10/state11/state12/state13/state15/state16/state17/state18/state20/state21/state22/state23/state24/state25/state26/state27/state28/state29/state30/state31/state32/state33/state34/state35/state36/state37/state38/state39/state40/state41/state42/state45/state46/state47/state48/state49/state51/state53/state55; 
 #delimit cr
 * ssc install mat2txt
 	mat2txt, matrix(state) saving(../inference/rmspe_bmprate.txt) replace
