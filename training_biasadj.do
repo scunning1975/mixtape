@@ -1,7 +1,7 @@
 * Nearest neighbor matching using teffects with bias correction
 clear
 capture log close
-use https://github.com/scunning1975/mixtape/raw/master/training_approximate.dta, clear
+use https://github.com/scunning1975/mixtape/raw/master/training_biasadj.dta, clear
 
 
 * Nearest neighbor match on age and high school gpa for the ATET using euclidean distance with bias adjustment
