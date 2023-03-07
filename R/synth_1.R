@@ -2,12 +2,11 @@ library(tidyverse)
 library(haven)
 library(Synth)
 library(devtools)
-if(!require(SCtools)) devtools::install_github("bcastanho/SCtools")
 library(SCtools)
 
 read_data <- function(df)
 {
-  full_path <- paste("https://raw.github.com/scunning1975/mixtape/master/", 
+  full_path <- paste("https://github.com/scunning1975/mixtape/raw/master/", 
                      df, sep = "")
   df <- read_dta(full_path)
   return(df)
