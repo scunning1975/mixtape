@@ -1,4 +1,5 @@
 library(tidyverse)
+library(patchwork)
 
 set.seed(3444)
 
@@ -10,20 +11,17 @@ star_is_born <- tibble(
   star = ifelse(score>=c85,1,0)
 )
 
-star_is_born %>% 
-  lm(beauty ~ talent, .) %>% 
+p1 = star_is_born %>% 
   ggplot(aes(x = talent, y = beauty)) +
-  geom_point(size = 0.5, shape=23) + xlim(-4, 4) + ylim(-4, 4)
+  geom_point(size = 1, alpha = 0.5) + xlim(-4, 4) + ylim(-4, 4) + 
+  geom_smooth(method = 'lm', se = FALSE) + 
+  labs(title = "Everyone")
 
-star_is_born %>% 
-  filter(star == 1) %>% 
-  lm(beauty ~ talent, .) %>% 
-  ggplot(aes(x = talent, y = beauty)) +
-  geom_point(size = 0.5, shape=23) + xlim(-4, 4) + ylim(-4, 4)
+p2 = star_is_born %>% 
+  ggplot(aes(x = talent, y = beauty, color = factor(star))) +
+  geom_point(size = 1, alpha = 0.25) + xlim(-4, 4) + ylim(-4, 4) + 
+  geom_smooth(method = 'lm', se = FALSE) + 
+  labs(title = "Everyone, but different") +
+  scale_color_discrete(name = 'Star')
 
-star_is_born %>% 
-  filter(star == 0) %>% 
-  lm(beauty ~ talent, .) %>% 
-  ggplot(aes(x = talent, y = beauty)) +
-  geom_point(size = 0.5, shape=23) + xlim(-4, 4) + ylim(-4, 4)
-
+p1 + p2
