@@ -33,7 +33,7 @@ balanced_sasp.shape
 provider_second = np.zeros(balanced_sasp.shape[0])
 provider_second[balanced_sasp.provider_second == "2. Yes"] = 1
 balanced_sasp.provider_second = provider_second
-
+balanced_sasp.reset_index(inplace=True, drop=True) 
 
 #Demean Data
 
@@ -41,8 +41,7 @@ features = balanced_sasp.columns.to_list()
 features = [x for x in features if x not in ['session', 'id', 'in_all_times']]
 demean_features = ["demean_{}".format(x) for x in features]
 
-balanced_sasp[demean_features] = balanced_sasp.groupby('id')[features].apply(lambda x : x - np.mean(x))
-
+balanced_sasp[demean_features] = balanced_sasp.groupby('id')[features].apply(lambda x : x - np.mean(x, axis=0)).reset_index()[features] 
 
 ##### Pooled OLS
 
