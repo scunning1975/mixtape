@@ -1,0 +1,31 @@
+\begin{table}[htbp]\centering
+\scriptsize
+\caption{Estimated effect of Prison Measures with 1993 Treatment (Fixed effects)}
+\begin{center}
+\begin{threeparttable}
+\begin{tabular}{l*{5}{c}}
+\toprule
+\multicolumn{1}{l}{\textbf{Prison Measures:}}&
+\multicolumn{1}{c}{\textbf{Incarceration}}&
+\multicolumn{1}{c}{\textbf{Black Male Incarceration}}&
+\multicolumn{1}{c}{\textbf{Officers}}&
+\multicolumn{1}{c}{\textbf{Drug Arrests}}&
+\multicolumn{1}{c}{\textbf{Paroles/Releases}}\\
+\midrule
+Prison expansion    &     309.569**   &     121.609   &       7.172   &      20.728   &      -0.166   \\
+5th percentile      &    -112.462   &     -65.781   &     -24.456   &     -59.214   &      -0.227   \\
+95th percentile     &     191.014   &     157.756   &      32.346   &     126.557   &       0.225   \\
+Two-tailed test p-value&        0.04   &        0.16   &        0.51   &        0.81   &        0.27   \\
+N                   &        1173   &        1173   &        1173   &         937   &        1120   \\
+\midrule
+State and year FE                              & Yes   & Yes   & Yes   & Yes   & Yes            \\
+Time variant controls                  & Yes   & Yes   & Yes   & Yes   & Yes            \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\tiny
+\item Time-variant controls include state-level values of percent White, Black, Asian, Other race, less than a high school degree, with a high school degree, with some college, with college degree or higher, aged 0-18, 19-30, 31-65, 65 and older, male, female, as well as average household income and percent who receive free lunch.  Table presents 5th and 95th percentile confidence intervals from placebo-based inferential calculations, and p-values from a two-tailed test. * p$<$0.10, ** p$<$0.05, *** p$<$0.01
+\end{tablenotes}
+\end{threeparttable}
+\end{center}
+\end{table}
